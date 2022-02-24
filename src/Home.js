@@ -14,6 +14,7 @@ const Home = () => {
     //     setAge(30)
     // }
 
+    //function to delete an item using filter method
     const deleteBlog = (id) =>{
         console.log("deleted");
         const newBlogs = blogs.filter((blog)=>blog.id !==id);

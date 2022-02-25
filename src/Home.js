@@ -3,7 +3,7 @@ import BlogList from "./BlogList";
 const Home = () => {
 
     const [blogs, seBlogs] = useState(null)
-
+    const [isLoading, setIsLoading] = useState(true)
     const [name, setName] = useState('Nobby')
 
 
@@ -11,26 +11,24 @@ const Home = () => {
     //     seName('Gudah')
     //     setAge(30)
     // }
-
-    //function to delete an item using filter method
-    const deleteBlog = (id) =>{
-        const newBlogs = blogs.filter((blog)=>blog.id !==id);
-        seBlogs(newBlogs)
-    }
+  
 
     //useEffect with dependencies. 
     //N.B=Use effect is a function that runs after every render of a page
 
     //Fetching json data using useEffect
     useEffect(()=>{
-       fetch('http://localhost:8000/blogs')
-       .then(res=>{
-           return res.json();
-       })
-       .then(data=>{
-           console.log(data);
-           seBlogs(data)
-       })
+       setTimeout(()=>{
+        fetch('http://localhost:8000/blogs')
+        .then(res=>{
+            return res.json();
+        })
+        .then(data=>{
+            console.log(data);
+            seBlogs(data)
+            setIsLoading(false)
+        })
+       }, 1000)
     }, [])
 
 
@@ -42,9 +40,8 @@ const Home = () => {
     return (
         <div>
             {/* conditional output */}
-            {blogs && <BlogList blogs={blogs} title="All Blogs" deleteBlog = {deleteBlog}/>}
-            <p>{name}</p>
-            <button onClick={()=>setName('Norbert')}>change name</button>
+            {isLoading && <div>Loading... </div>}
+            {blogs && <BlogList blogs={blogs} title="All Blogs"/>}
         </div>
     );
 }

@@ -1,0 +1,27 @@
+
+
+{
+    "blogs": [
+        { 
+            "title" : "Good manners", 
+            "body": "Lorem ipsum dolor sit amet.....'", 
+            "author": "Norbert", 
+            "id": 1 
+        },
+        { "title" : "IT Essentials", 
+            "body": "Lorem ipsum dolor sit amet.....", 
+            "author": "Guda", 
+            "id": 2 
+        },
+        { "title" : "Hacking", 
+            "body": "Lorem ipsum dolor sit amet.....", 
+            "author": "Norbert", 
+            "id": 3 
+        },
+        { "title" : "Listening skills", 
+            "body": "Lorem ipsum dolor sit amet.....", 
+            "author": "Dommy", 
+            "id": 4 
+        }
+    ]
+}

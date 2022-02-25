@@ -9,7 +9,7 @@
             "id": 1 
         },
         { "title" : "IT Essentials", 
-            "body": "Lorem ipsum dolor sit amet.....", 
+            "body": " to watch a json server file, run this command: npx json-server --watch data/db.js(file lication) --port 8000(port number)", 
             "author": "Guda", 
             "id": 2 
         },

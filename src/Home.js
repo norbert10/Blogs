@@ -5,6 +5,7 @@ const Home = () => {
     const [blogs, seBlogs] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
     const [name, setName] = useState('Nobby')
+    const [err, setErr] = useState(null)
 
 
     // const handleClick = ()=>{
@@ -21,11 +22,19 @@ const Home = () => {
        setTimeout(()=>{
         fetch('http://localhost:8000/blogs')
         .then(res=>{
+            if(!res.ok){
+                throw Error('Cannot Fetch the data. Please try again')
+            }
             return res.json();
         })
         .then(data=>{
-            console.log(data);
             seBlogs(data)
+            setIsLoading(false)
+            setErr(null)
+        })
+        .catch(err =>{
+            // console.log(err.message)
+            setErr(err.message)
             setIsLoading(false)
         })
        }, 1000)
@@ -40,6 +49,7 @@ const Home = () => {
     return (
         <div>
             {/* conditional output */}
+            {err && <div>{err}</div>}
             {isLoading && <div>Loading... </div>}
             {blogs && <BlogList blogs={blogs} title="All Blogs"/>}
         </div>

@@ -15,7 +15,6 @@ const BlogDetails = () => {
                 <div>{blog.body}</div>
             </article>
             )}
-            {/* <h2>Blog details - {id}</h2> */}
         </div>
      );
 }

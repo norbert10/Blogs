@@ -4,11 +4,21 @@ const Create = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [author, setAuthor] = useState('Norbert')
+    const [isLoading, setIsLoading] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsLoading(true)
         const blog = { title, body, author }
         console.log(blog);
+        fetch('http://localhost:8000/blogs', {
+            method: 'POST',
+            headers: { 'content-Type': 'Application/json' },
+            body: JSON.stringify(blog)
+        }).then(() => {
+            console.log('Blog added successfully')
+            setIsLoading(false)
+        })
     }
     return (
         <div className="create">
@@ -38,7 +48,8 @@ const Create = () => {
                     <option value='guda'>Guda</option>
                     <option value='dommy'>Dommy</option>
                 </select>
-                <button>Add blog</button>
+                {!isLoading && <button>Add blog</button>}
+                {isLoading && <button>Adding blog...</button>}
             </form>
         </div>
     );

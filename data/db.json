@@ -1,27 +1,46 @@
-
-
 {
-    "blogs": [
-        { 
-            "title" : "Good manners", 
-            "body": "Lorem ipsum dolor sit amet.....'", 
-            "author": "Norbert", 
-            "id": 1 
-        },
-        { "title" : "IT Essentials", 
-            "body": " to watch a json server file, run this command: npx json-server --watch data/db.js(file lication) --port 8000(port number)", 
-            "author": "Guda", 
-            "id": 2 
-        },
-        { "title" : "Hacking", 
-            "body": "Lorem ipsum dolor sit amet.....", 
-            "author": "Norbert", 
-            "id": 3 
-        },
-        { "title" : "Listening skills", 
-            "body": "Lorem ipsum dolor sit amet.....", 
-            "author": "Dommy", 
-            "id": 4 
-        }
-    ]
+  "blogs": [
+    {
+      "title": "Good manners",
+      "body": "Lorem ipsum dolor sit amet.....'",
+      "author": "Norbert",
+      "id": 1
+    },
+    {
+      "title": "IT Essentials",
+      "body": " to watch a json server file, run this command: npx json-server --watch data/db.js(file lication) --port 8000(port number)",
+      "author": "Guda",
+      "id": 2
+    },
+    {
+      "title": "Hacking",
+      "body": "Lorem ipsum dolor sit amet.....",
+      "author": "Norbert",
+      "id": 3
+    },
+    {
+      "title": "Listening skills",
+      "body": "Lorem ipsum dolor sit amet.....",
+      "author": "Dommy",
+      "id": 4
+    },
+    {
+      "title": "Rusia and Ukraine",
+      "body": "The war is not ending soon. Will Russia accomplish their mission?",
+      "author": "guda",
+      "id": 5
+    },
+    {
+      "title": "Hackathon",
+      "body": "A hackathon (also known as a hack day, hackfest, datathon or codefest; a portmanteau of hacking marathon) is a design sprint-like event, in which often computer programmers and others involved in software development, including graphic designers, interface designers, product managers, project managers, domain experts, and others collaborate intensively on software projects.\n\nThe goal of a hackathon is to create functioning software or hardware by the end of the event. Hackathons tend to have a specific focus, which can include the programming language used, the operating system, an application, an API, or the subject and the demographic group of the programmers. In other cases, there is no restriction on the type of software being created. ",
+      "author": "Norbert",
+      "id": 6
+    },
+    {
+      "title": "Data science",
+      "body": "Data science is an interdisciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from noisy, structured and unstructured data, and apply knowledge and actionable insights from data across a broad range of application domains. Data science is related to data mining, machine learning and big data.\n\nData science is a \"concept to unify statistics, data analysis, informatics, and their related methods\" in order to \"understand and analyze actual phenomena\" with data. It uses techniques and theories drawn from many fields within the context of mathematics, statistics, computer science, information science, and domain knowledge.However, data science is different from computer science and information science. Turing Award winner Jim Gray imagined data science as a \"fourth paradigm\" of science (empirical, theoretical, computational, and now data-driven) and asserted that \"everything about science is changing because of the impact of information technology\" and the data deluge",
+      "author": "Norbert",
+      "id": 7
+    }
+  ]
 }
